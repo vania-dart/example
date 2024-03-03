@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    image: app
+    container_name: app
+    restart: always
+    working_dir: /www
+    volumes:
+      - .:/www
+    ports:
+      - 8000:8000
