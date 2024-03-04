@@ -509,10 +509,10 @@ packages:
     dependency: "direct main"
     description:
       name: vania
-      sha256: "2d847a234d934a6d8cc2d798594e02091bfc379bac9471a991be2f8e27290c70"
+      sha256: b319b7bfe4552d1df4cab9723af44b7c5f4f35aa0b75a9ed652b2d5385e61565
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.1.1+1"
+    version: "0.1.1+2"
   vm_service:
     dependency: transitive
     description:
