@@ -5,10 +5,12 @@ import 'package:vania/vania.dart';
 import '../../app/http/controllers/auth/auth_controller.dart';
 import '../../app/http/controllers/user/user_controller.dart';
 
-class V1 extends Route {
+class Version1 extends Route {
   @override
   void register() {
-    Router().basePrefix('api/v1');
+
+
+    Router.basePrefix('api/v1');
 
     /// Authentication Routes
     Router.post('login', authController.login);

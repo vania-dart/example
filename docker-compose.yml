@@ -11,3 +11,17 @@ services:
       - .:/www
     ports:
       - 8000:8000
+      
+
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456 #Database root password
+      - MYSQL_DATABASE=MyDB #Database name
+      - MYSQL_USER=DBUser #Database user
+      - MYSQL_PASSWORD=123456 #Database password
+    ports:
+      - 3306:3306
+    volumes:
+      - $PWD/mysql:/var/lib/mysql 
