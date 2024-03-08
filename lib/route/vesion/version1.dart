@@ -20,7 +20,7 @@ class Version1 extends Route {
     Router.group(
       [
         GroupRouter.get('details', userController.index),
-        GroupRouter.post('update', userController.update),
+        GroupRouter.patch('update', userController.update),
       ],
       prefix: 'user',
       middleware: [AuthenticateMiddleware()],
