@@ -6,19 +6,27 @@ import 'cros.dart';
 import 'database.dart';
 
 Map<String, dynamic> config = {
-  'name': 'example',
-  'key': 'C1-Gir9lOK8ImV4QaTf7MKVleZCxK0j-bpRf0oROBPw=',
-  'port': 8000,
-  'host': '0.0.0.0',
-  'debug': true,
-  'url': '',
+  'name': env('APP_NAME'),
+  'url': env('APP_URL'),
   'timezone': '',
   'websocket': false,
+  'isolate': false,
+  'isolateCount': 4,
   'cors': cors,
-  'database': databaseConfig,
+  'database': null,//databaseConfig, Put Your Databse config here
   'cache': CacheConfig(),
   'auth': authConfig,
   'storage': FileStorageConfig(),
+  'mail': {
+    'driver':env('MAIL_MAILER'),
+    'host':env('MAIL_HOST'),
+    'port':env('MAIL_PORT'),
+    'username':env('MAIL_USERNAME'),
+    'password':env('MAIL_PASSWORD'),
+    'encryption':env('MAIL_ENCRYPTION'),
+    'from_name':env('MAIL_FROM_NAME'),
+    'from_address':env('MAIL_FROM_ADDRESS'),
+  },
   'providers': <ServiceProvider>[
     RouteServiceProvider(),
   ],

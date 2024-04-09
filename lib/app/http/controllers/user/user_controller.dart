@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:vania/vania.dart';
 
 import '../../../models/user.dart';
@@ -29,6 +31,7 @@ class UserController extends Controller {
       'avatar.file': 'The avatar must be a image file',
     });
 
+    
     /// Upload avtar if is sent
     RequestFile? avatar = request.file('avatar');
     String avatarPath = '';
@@ -45,8 +48,10 @@ class UserController extends Controller {
       'avatar': avatarPath,
     });
 
+
     return Response.json({'message': 'User updated successfully'});
   }
+
 }
 
 final UserController userController = UserController();

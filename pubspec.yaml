@@ -7,7 +7,7 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
-  vania:
+  vania: 
 
 
 
