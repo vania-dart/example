@@ -28,9 +28,8 @@ class AuthController extends Controller {
       return Response.json({'message': 'Wrong password'});
     }
 
-
-  // If you have guard and multi access like user and admin you can pass the guard Auth().guard('admin')
-    Map<String, dynamic> token = Auth()
+    // If you have guard and multi access like user and admin you can pass the guard Auth().guard('admin')
+    Map<String, dynamic> token = await Auth()
         .login(user)
         .createToken(expiresIn: Duration(hours: 24), withRefreshToken: true);
 
@@ -80,18 +79,17 @@ class AuthController extends Controller {
     Random rnd = Random();
     int otp = rnd.nextInt(999999 - 111111);
 
-    Cache otpCache = Cache();
-    otpCache.put('otp', otp.toString(), duration: Duration(minutes: 3));
+    Cache.put('otp', otp.toString(), duration: Duration(minutes: 3));
 
     return Response.json({'message': 'OTP sent successfully'});
   }
 
   Future<Response> verifyOTO(Request request) async {
     String otp = request.input('otp');
-    Cache otpCache = Cache();
-    String? otpValue = await otpCache.get('otp');
+    final otpValue = Cache.get('otp');
+
     if (otpValue == otp) {
-      otpCache.delete('otp');
+      Cache.delete('otp');
       return Response.json({'message': 'OTP verified successfully'});
     } else {
       return Response.json(

@@ -7,9 +7,9 @@ class ApiRoute implements Route {
   void register() {
     Version1().register();
 
-    Router.get('/', (){
-      return Response.html('<b>Hello World, welcome to Fullstack development with Vania</b>');
+    Router.get('/', () {
+      return Response.html(
+          '<b>Hello World, welcome to Fullstack development with Vania</b>');
     });
-
   }
 }

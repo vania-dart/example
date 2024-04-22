@@ -8,8 +8,6 @@ import '../../app/http/controllers/user/user_controller.dart';
 class Version1 extends Route {
   @override
   void register() {
-
-
     Router.basePrefix('api/v1');
 
     /// Authentication Routes
@@ -18,19 +16,19 @@ class Version1 extends Route {
     Router.post('refresh-token', authController.refreshToken);
 
     Router.group(
-      [
-        GroupRouter.get('details', userController.index),
-        GroupRouter.patch('update', userController.update),
-      ],
+      () {
+        Router.get('details', userController.index);
+        Router.patch('update', userController.update);
+      },
       prefix: 'user',
       middleware: [AuthenticateMiddleware()],
     );
 
     Router.group(
-      [
-        GroupRouter.get('all', postController.index),
-        GroupRouter.post('create', postController.create),
-      ],
+      () {
+        Router.get('all', postController.index);
+        Router.post('create', postController.create);
+      },
       prefix: 'post',
       middleware: [AuthenticateMiddleware()],
     );

@@ -28,13 +28,14 @@ class UserController extends Controller {
       'last_name.max_length': 'The last name must be less than 20 characters',
       'email.required': 'The email is required',
       'email.email': 'The email is not valid',
-      'avatar.file': 'The avatar must be a image file',
+      'avatar.file': 'The avatar must be an image file',
     });
 
-    
     /// Upload avtar if is sent
     RequestFile? avatar = request.file('avatar');
     String avatarPath = '';
+
+    // If you have guard you can get user id by guard ex: Auth().guard('admin').id()
     if (avatar != null) {
       /// The file will be stored in the storage/app/public/user/user_id folder
       avatarPath = await avatar.store(
@@ -48,10 +49,8 @@ class UserController extends Controller {
       'avatar': avatarPath,
     });
 
-
     return Response.json({'message': 'User updated successfully'});
   }
-
 }
 
 final UserController userController = UserController();

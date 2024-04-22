@@ -6,7 +6,7 @@ class CreatePostsTable extends Migration {
     super.up();
     await createTable('posts', () {
       id();
-      bigInt('user_id',unsigned: true);
+      bigInt('user_id', unsigned: true);
       longText('text', nullable: true);
       timeStamp('created_at', nullable: true);
       timeStamp('updated_at', nullable: true);

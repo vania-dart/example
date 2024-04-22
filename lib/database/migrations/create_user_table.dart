@@ -8,7 +8,7 @@ class CreateUserTable extends Migration {
       id();
       string('first_name', length: 20);
       string('last_name', length: 20);
-      string('email',length: 50);
+      string('email', length: 50);
       string('password');
       string('avatar', nullable: true);
       timeStamp('created_at', nullable: true);

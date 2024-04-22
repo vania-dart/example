@@ -133,10 +133,10 @@ packages:
     dependency: transitive
     description:
       name: eloquent
-      sha256: a18d9a9f285b2ad128b107a6d4b68b10e4f43f0094bfa6b2dd7b9d92719adefc
+      sha256: b827e5d33ebf18b9ecb8e011253174a456a444fab945da4cde7c63aeed9c39a8
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "3.0.0"
+    version: "3.1.2"
   enough_convert:
     dependency: transitive
     description:
@@ -253,10 +253,10 @@ packages:
     dependency: transitive
     description:
       name: meta
-      sha256: "7687075e408b093f36e6bbf6c91878cc0d4cd10f409506f7bc996f68220b9136"
+      sha256: "25dfcaf170a0190f47ca6355bdd4552cb8924b430512ff0cafb8db9bd41fe33b"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.12.0"
+    version: "1.14.0"
   mime:
     dependency: transitive
     description:
@@ -325,10 +325,10 @@ packages:
     dependency: transitive
     description:
       name: postgres
-      sha256: b743c8b1d4af6e2840fa1e2ce2d3376b829d097b6db7340a1154effac69cc738
+      sha256: bd1df6d2f4ad71aef92dc59e867e3ba9ec22cf2212a81cf9d35aa061ce80b1ae
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "3.1.1"
+    version: "3.2.0"
   postgres_fork:
     dependency: transitive
     description:
@@ -509,18 +509,18 @@ packages:
     dependency: transitive
     description:
       name: uuid
-      sha256: cd210a09f7c18cbe5a02511718e0334de6559871052c90a90c0cca46a4aa81c8
+      sha256: "814e9e88f21a176ae1359149021870e87f7cddaf633ab678a5d2b0bff7fd1ba8"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "4.3.3"
+    version: "4.4.0"
   vania:
     dependency: "direct main"
     description:
       name: vania
-      sha256: "6253cd2960ab5d67057d15ec7e49881dad81b0057e663cd6b61f4365eec124de"
+      sha256: "4ecc74c20e2e72e40864333e298e3866a11b4e932982305bdfcfdd3075dab5f4"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.1.5+1"
+    version: "0.1.7+2"
   vm_service:
     dependency: transitive
     description:
