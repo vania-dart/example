@@ -4,7 +4,7 @@ class ErrorResponseMiddleware extends Middleware {
   @override
   handle(Request req) async {
     if(req.header('content-type') != 'application/json') {
-      throw HttpException(message: 'Your request is not valid', code: 400);
+      abort(400,'Your request is not valid');
     }
     next?.handle(req);
   }
